@@ -1,3 +1,5 @@
+import "./Style.css";
+
 import { useNavigate } from "react-router-dom";
 
 const Intro = () => {
@@ -18,9 +20,7 @@ const Intro = () => {
         <div className="wrapper">
           <h2>What is Python?</h2>
           <p>
-            A popular programming language created by{" "}
-            <span className="highlight">Guido Van Rossum</span> in{" "}
-            <span className="highlight">1991</span>.
+            A popular programming language created by Guido Van Rossum in 1991.
           </p>
         </div>
       </section>
@@ -41,7 +41,8 @@ const Intro = () => {
             </li>
             <li>
               <p>
-                It has <span className="highlight">large number of libraries</span>.
+                It has{" "}
+                <span className="highlight">large number of libraries</span>.
               </p>
             </li>
             <li>
@@ -52,7 +53,8 @@ const Intro = () => {
             </li>
             <li>
               <p>
-                Code is <span className="highlight">clearly defined</span> & <span className="highlight">well-structured</span>.
+                Code is <span className="highlight">clearly defined</span> &{" "}
+                <span className="highlight">well-structured</span>.
               </p>
             </li>
             <li>
@@ -106,11 +108,11 @@ const Intro = () => {
             </li>
             <li>
               <p>
-                <span className="highlight">GUI Programming:</span> Python support{" "}
-                <span className="highlight">GUI Application</span> that acn be
-                created & ported to many{" "}
-                <span className="highlight">windows system of UNIX</span> (family
-                of operating systems).
+                <span className="highlight">GUI Programming:</span> Python
+                support <span className="highlight">GUI Application</span> that
+                acn be created & ported to many{" "}
+                <span className="highlight">windows system of UNIX</span>{" "}
+                (family of operating systems).
               </p>
             </li>
           </ul>
@@ -122,10 +124,9 @@ const Intro = () => {
     return (
       <section className="step-sections section">
         <div className="wrapper">
-          <button
-            className="primary"
-            onClick={() => navigate("/installation")}
-          >Installation {">"}</button>
+          <button className="primary" onClick={() => navigate("/installation")}>
+            Installation {">"}
+          </button>
         </div>
       </section>
     );
@@ -135,7 +136,7 @@ const Intro = () => {
     <DefinitionSection />,
     <FeaturesSection />,
     <InfoSection />,
-    <StepSection />
+    <StepSection />,
   ];
   return (
     <main className="intro-page">

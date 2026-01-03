@@ -1,9 +1,9 @@
-import Intro from "../pages/Intro";
-import Installation from "../pages/Installation";
+import Intro from "../pages/intro/Page";
+import Installation from "../pages/installation/Page";
 
 const Pages = [
   {
-    title: "Intro",
+    title: "Introduction",
     element: <Intro />,
     path: "/",
   },
