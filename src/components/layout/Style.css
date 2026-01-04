@@ -4,4 +4,5 @@
   right: 2rem;
   display: flex;
   gap: 1rem;
+  z-index: 20;
 }

@@ -1,5 +1,7 @@
 import "./Style.css";
 
+import Divider from "../../components/common/Divider";
+
 import { useNavigate } from "react-router-dom";
 
 const Installation = () => {
@@ -73,7 +75,7 @@ const Installation = () => {
   };
   const StepSection = () => {
     return (
-      <section className="step-sections section">
+      <section className="step-section space-between section">
         <div className="wrapper">
           <button className="primary" onClick={() => navigate("/")}>
             {"<"} Introduction
@@ -85,7 +87,7 @@ const Installation = () => {
       </section>
     );
   };
-  const Sections = [<HeroSection />, <InstructionsSection />, <StepSection />];
+  const Sections = [<HeroSection />, <InstructionsSection />, <Divider />, <StepSection />];
   return (
     <main className="installation-page">
       {Sections.map((section) => {

@@ -48,16 +48,5 @@ main.installation-page {
         }
       }
     }
-
-    &:nth-child(3) {
-      padding: 0 2rem 2rem;
-
-      & .wrapper {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: end;
-      }
-    }
   }
 }

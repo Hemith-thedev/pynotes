@@ -92,13 +92,5 @@ main.intro-page {
         }
       }
     }
-
-    &:nth-child(5) {
-      padding: 0 2rem 2rem;
-
-      & .wrapper {
-        align-items: end;
-      }
-    }
   }
 }

@@ -2,12 +2,8 @@ import React, { useState } from "react";
 import "./Style.css";
 
 const ThemeToggle = () => {
-  const [themeLabel, setThemeLabel] = useState(() => {
-    return document.body.classList.contains("light") ? "DARK" : "LIGHT"
-  });
-  const [glowLabel, setGlowLabel] = useState(() => {
-    return document.body.classList.contains("glow") ? "Glow: OFF" : "Glow: ON"
-  });
+  const [themeLabel, setThemeLabel] = useState("DARK");
+  const [glowLabel, setGlowLabel] = useState("Glow: OFF");
   const body = document.body;
   let BodyClass = body.classList;
   return (
@@ -34,6 +30,7 @@ const ThemeToggle = () => {
         } else if (BodyClass.contains("dark")){
           BodyClass.add("light");
           BodyClass.remove("dark");
+          BodyClass.remove("glow");
         }
         setThemeLabel(UpdatedThemeLabel);
       }}

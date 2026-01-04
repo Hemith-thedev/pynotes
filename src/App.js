@@ -1,4 +1,4 @@
-import logo from "./logo.svg";
+
 import "./App.css";
 
 import ThemeToggle from "./components/layout/ThemeToggle";
@@ -13,6 +13,9 @@ function App() {
   useEffect(() => {
     const ActivePage = Pages.find((page) => location.pathname === page.path);
     document.title = `${ActivePage.title} | Pynotes`;
+  }, [location.pathname]);
+  useEffect(() => {
+    window.scrollTo(0, 0);
   }, [location.pathname]);
   return (
     <>

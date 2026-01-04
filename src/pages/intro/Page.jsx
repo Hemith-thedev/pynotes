@@ -1,5 +1,7 @@
 import "./Style.css";
 
+import Divider from "../../components/common/Divider";
+
 import { useNavigate } from "react-router-dom";
 
 const Intro = () => {
@@ -110,7 +112,7 @@ const Intro = () => {
               <p>
                 <span className="highlight">GUI Programming:</span> Python
                 support <span className="highlight">GUI Application</span> that
-                acn be created & ported to many{" "}
+                can be created & ported to many{" "}
                 <span className="highlight">windows system of UNIX</span>{" "}
                 (family of operating systems).
               </p>
@@ -122,7 +124,7 @@ const Intro = () => {
   };
   const StepSection = () => {
     return (
-      <section className="step-sections section">
+      <section className="step-section end section">
         <div className="wrapper">
           <button className="primary" onClick={() => navigate("/installation")}>
             Installation {">"}
@@ -136,6 +138,7 @@ const Intro = () => {
     <DefinitionSection />,
     <FeaturesSection />,
     <InfoSection />,
+    <Divider />,
     <StepSection />,
   ];
   return (
