@@ -1,6 +1,7 @@
 import "./Style.css";
 
 import Divider from "../../components/common/Divider";
+import Navigator from "../../components/common/Navigator";
 
 import { useNavigate } from "react-router-dom";
 
@@ -126,9 +127,7 @@ const Intro = () => {
     return (
       <section className="step-section end section">
         <div className="wrapper">
-          <button className="primary" onClick={() => navigate("/installation")}>
-            Installation {">"}
-          </button>
+          <Navigator path={"/installation"} label="Installation" position="right" />
         </div>
       </section>
     );

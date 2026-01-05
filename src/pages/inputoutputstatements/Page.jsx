@@ -1,6 +1,5 @@
-import "./Style.css";
-
 import Divider from "../../components/common/Divider";
+import Navigator from "../../components/common/Navigator";
 
 import { useNavigate } from "react-router-dom";
 
@@ -10,7 +9,7 @@ const FirstProgramsPage = () => {
     return (
       <section className="hero-section section">
         <div className="wrapper">
-          <h1>Input & Output Statements</h1>
+          <h1>IO Statements</h1>
         </div>
       </section>
     );
@@ -28,15 +27,7 @@ const FirstProgramsPage = () => {
               <p><code className="single-line-code"><span className="purple">input</span>()</code> function is used for input statements.</p>
             </li>
           </ul>
-        </div>
-      </section>
-    );
-  };
-  const ISExampleSection = () => {
-    return (
-      <section className="example-section section">
-        <div className="wrapper">
-          <h3 className="step">Example</h3>
+          <h5 className="step">Example</h5>
           <ul className="step">
             <li>
               <p>
@@ -47,6 +38,15 @@ const FirstProgramsPage = () => {
               <p>This program reads & stores the value of <code className="single-line-code">name</code> from the user.</p>
             </li>
           </ul>
+        </div>
+      </section>
+    );
+  };
+  const ISExampleSection = () => {
+    return (
+      <section className="example-section section">
+        <div className="wrapper">
+          
         </div>
       </section>
     );
@@ -64,15 +64,7 @@ const FirstProgramsPage = () => {
               <p><code className="single-line-code"><span className="purple">print</span>()</code> function is used for output statements.</p>
             </li>
           </ul>
-        </div>
-      </section>
-    );
-  };
-  const OSExampleSection = () => {
-    return (
-      <section className="example-section section">
-        <div className="wrapper">
-          <h3 className="step">Example</h3>
+          <h5 className="step">Example</h5>
           <ul className="step">
             <li>
               <pre className="code-container">
@@ -86,6 +78,15 @@ const FirstProgramsPage = () => {
               <p>This program prints the value of <code className="single-line-code">name</code>.</p>
             </li>
           </ul>
+        </div>
+      </section>
+    );
+  };
+  const OSExampleSection = () => {
+    return (
+      <section className="example-section section">
+        <div className="wrapper">
+          
         </div>
       </section>
     );
@@ -150,12 +151,8 @@ const FirstProgramsPage = () => {
     return (
       <section className="step-section space-between section">
         <div className="wrapper">
-          <button className="primary" onClick={() => navigate("/basics")}>
-            {"<"} Basics
-          </button>
-          <button className="primary" onClick={() => navigate("/control-statements")}>
-            Control statements {">"}
-          </button>
+          <Navigator path={"/basics"} label={"Basics"} position={"left"} />
+          <Navigator path={"/control-statements/1"} label={"Control statements"} position={"right"} />
         </div>
       </section>
     );

@@ -1,96 +1,17 @@
 main.intro-page {
-  & section {
-    &:nth-child(1) {
-      min-height: 100vh;
-      text-align: center;
-
-      & .wrapper {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-
-        & p {
-          margin-top: 1rem;
-        }
-      }
-    }
-
-    &:nth-child(2) {
-      padding: 0 1rem;
-
-      & .wrapper {
-        padding: 1rem;
-        border-radius: 1rem;
-        height: fit-content;
-        width: 100%;
-        background: linear-gradient(
-          to right,
-          var(--color-p-o),
-          var(--color-s-o)
-        );
-        color: var(--color-l-o);
-      }
-    }
-
-    &:nth-child(3) {
-      padding: 0 2rem;
-
-      & .wrapper {
-        gap: 1rem;
-
-        & ul {
-          display: flex;
-          flex-direction: column;
-          justify-content: start;
-          align-items: start;
-          gap: 0.5rem;
-          height: fit-content;
-          width: 100%;
-
-          & li {
-            display: flex;
-            gap: 0.5rem;
-            list-style: none;
-            position: relative;
-
-            &::before {
-              content: ">";
-              transform: translateY(5%);
-            }
-          }
-        }
-      }
-    }
-
-    &:nth-child(4) {
-      padding: 0 2rem;
-
-      & .wrapper {
-        gap: 1rem;
-
-        & ul {
-          display: flex;
-          flex-direction: column;
-          justify-content: start;
-          align-items: start;
-          gap: 0.5rem;
-          height: fit-content;
-          width: 100%;
-
-          & li {
-            display: flex;
-            gap: 0.5rem;
-            list-style: none;
-            position: relative;
-
-            &::before {
-              content: ">";
-              transform: translateY(5%);
-            }
-          }
-        }
-      }
+  & section.hero-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100svh;
+    width: 100%;
+    & .wrapper {display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: none;
+      color: var(--color-d-o);
     }
   }
 }

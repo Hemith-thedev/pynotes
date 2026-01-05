@@ -1,6 +1,7 @@
 import "./Style.css";
 
 import Divider from "../../components/common/Divider";
+import Navigator from "../../components/common/Navigator";
 
 import { useNavigate } from "react-router-dom";
 
@@ -77,12 +78,8 @@ const Installation = () => {
     return (
       <section className="step-section space-between section">
         <div className="wrapper">
-          <button className="primary" onClick={() => navigate("/")}>
-            {"<"} Introduction
-          </button>
-          <button className="primary" onClick={() => navigate("/basics")}>
-            Basics {">"}
-          </button>
+          <Navigator path={"/"} label={"Introduction"} position={"left"} />
+          <Navigator path={"/basics"} label={"Basics"} position={"right"} />
         </div>
       </section>
     );

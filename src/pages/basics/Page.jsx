@@ -1,6 +1,5 @@
-import "./Style.css";
-
 import Divider from  "../../components/common/Divider";
+import Navigator from "../../components/common/Navigator";
 
 import { useNavigate } from "react-router-dom";
 
@@ -8,7 +7,7 @@ const Basics = () => {
   const navigate = useNavigate();
   const HeroSection = () => {
     return (
-      <section className="definition-section section">
+      <section className="hero-section section">
         <div className="wrapper">
           <h1>Basics of Python</h1>
         </div>
@@ -88,7 +87,7 @@ const Basics = () => {
                 <p>In Python, operators are used <span className="highlight">to perform specific operations</span> on variables and values:</p>
               </li>
               <li>
-                <ul className="step">
+                <ul>
                   <li>
                     <p>Enabling data manipulation</p>
                   </li>
@@ -178,12 +177,8 @@ const Basics = () => {
     return (
       <section className="step-section space-between section">
         <div className="wrapper">
-          <button className="primary" onClick={() => navigate("/installation")}>
-            {"<"} Installation
-          </button>
-          <button className="primary" onClick={() => navigate("/input-and-output-statements")}>
-            Programs {">"}
-          </button>
+          <Navigator path={"/installation"} label={"Installation"} position={"left"} />
+          <Navigator path={"/input-and-output-statements"} label={"Programs"} position={"right"} />
         </div>
       </section>
     );
