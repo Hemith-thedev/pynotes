@@ -130,11 +130,9 @@ const FirstProgramsPage = () => {
             <li>
               <pre className="code-container">
                 <code className="code-wrapper">
-                  <span className="red"># Reading - input</span><br />
                   a = <span className="purple">int</span>(<span className="purple">input</span>(<span className="green">"Enter first number: "</span>))<br />
                   b = <span className="purple">int</span>(<span className="purple">input</span>(<span className="green">"Enter second number: "</span>))<br />
                   <br />
-                  <span className="red"># Printing - output</span><br />
                   <span className="purple">print</span>(<span className="green">"Sum: "</span> + <span className="purple">str</span>(a + b))<br />
                   <span className="purple">print</span>(<span className="green">"Product: "</span> + <span className="purple">str</span>(a * b))<br />
                   <span className="purple">print</span>(<span className="green">"Difference: "</span> + <span className="purple">str</span>(a - b))<br />

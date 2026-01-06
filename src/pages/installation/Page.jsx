@@ -9,7 +9,7 @@ const Installation = () => {
   const navigate = useNavigate();
   const HeroSection = () => {
     return (
-      <section className="definition-section section">
+      <section className="hero-section section">
         <div className="wrapper">
           <h1>Installation of Python</h1>
         </div>

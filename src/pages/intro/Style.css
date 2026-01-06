@@ -6,12 +6,13 @@ main.intro-page {
     align-items: center;
     min-height: 100svh;
     width: 100%;
-    & .wrapper {display: flex;
+    & .wrapper {
+      display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       background: none;
-      color: var(--color-d-o);
+      color: var(--fg);
     }
   }
 }

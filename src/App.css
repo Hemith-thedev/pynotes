@@ -11,11 +11,13 @@
 
   /* Lights */
   --color-l-o: hsl(0, 0%, 85%);
+  --color-l-o-t: hsla(0, 0%, 85%, 0.75);
   --color-l-l: hsl(0, 0%, 100%);
   --color-l-d: hsl(0, 0%, 80%);
 
   /* Darks */
   --color-d-o: hsl(0, 0%, 10%);
+  --color-d-o-t: hsla(0, 0%, 10%, 0.75);
   --color-d-l: hsl(0, 0%, 20%);
   --color-d-d: hsl(0, 0%, 0%);
 
@@ -63,6 +65,10 @@ body {
     & .single-line-code {
       background-color: var(--color-l-d);
     }
+
+    & .popup {
+      background-color: var(--color-l-o-t);
+    }
   }
 
   &.dark {
@@ -92,11 +98,23 @@ body {
     & .single-line-code {
       background-color: var(--color-d-l);
     }
+
+    & .popup {
+      background-color: var(--color-d-o-t);
+    }
   }
 
   &.glow {
-    & span.highlight {
-      text-shadow: 0 0 1rem;
+    & span {
+
+      &.highlight {
+        text-shadow: 0 0 1rem;
+      }
+
+      &.purple,
+      &.orange {
+        text-shadow: 0 0 0.5rem;
+      }
     }
 
     & .divider-section {
@@ -160,6 +178,10 @@ span.highlight {
   border-radius: 1rem;
   font-size: 1.25rem;
 
+  &.code-container {
+    box-shadow: 0 0.5rem 1rem #00000030;
+  }
+
   &.single-line-code {
     padding: 0.4rem;
     border-radius: 0.4rem;
@@ -170,7 +192,7 @@ span.highlight {
   }
 
   & .purple {
-    color: #a30090;
+    color: #b1009c;
   }
 
   & .green {
@@ -206,8 +228,8 @@ img {
 
 .fill-primary-secondary {
   background: linear-gradient(to right,
-      var(--color-p-o),
-      var(--color-s-o));
+      var(--primary-o),
+      var(--secondary-o));
   height: fit-content;
   width: fit-content;
   -webkit-background-clip: text;
@@ -294,11 +316,9 @@ main {
 
       & .wrapper {
         padding: 1rem;
-        background: linear-gradient(
-          to right,
-          var(--primary-o),
-          var(--secondary-o)
-        );
+        background: linear-gradient(to right,
+            var(--primary-o),
+            var(--secondary-o));
         border-radius: 1rem;
         color: var(--bg);
       }
@@ -362,6 +382,57 @@ main {
             pointer-events: none;
             transition: 0.1s ease-in-out;
           }
+        }
+      }
+    }
+
+    &.question-paper-section {
+      & .wrapper {
+        & .head {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+      }
+    }
+  }
+
+  & .popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow-y: scroll;
+    max-height: 100svh;
+    width: 100%;
+    padding: 2rem;
+    backdrop-filter: blur(30px);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.1s ease-in-out;
+
+    &.open {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    & .wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      & .head {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 2rem;
+      }
+
+      & .content {
+        &>ul {
+          display: flex;
+          flex-direction: column;
+          gap: 2rem;
         }
       }
     }

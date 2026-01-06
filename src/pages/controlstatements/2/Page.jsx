@@ -32,6 +32,9 @@ const LoopingControlStatements = () => {
                 <li>
                   <p><span className="highlight">while</span> loop - checks the condition first and enters the loop</p>
                 </li>
+                <li>
+                  <p><span className="highlight">nested</span> loop - loop in a loop</p>
+                </li>
               </ul>
               <h5>Syntaxes</h5>
               <ul className="step">
@@ -126,6 +129,30 @@ const LoopingControlStatements = () => {
                 </li>
               </ul>
             </li>
+            <li>
+              <ul>
+                <li>
+                  <p>Q. Python code to print <span className="highlight">increasing stars</span> using 'nested' loop</p>
+                </li>
+                <li>
+                  <pre className="code-container">
+                    <code className="code-wrapper">
+                      <span className="red"># 1. Setting row range</span><br />
+                      <span className="orange">for</span> i <span className="orange">in</span> <span className="purple">range</span>(0, 6, 1):<br />
+                      <br />
+                      &nbsp;&nbsp;&nbsp;&nbsp;<span className="red"># 2. Setting columns range</span><br />
+                      &nbsp;&nbsp;&nbsp;&nbsp;<span className="orange">for</span> j <span className="orange">in</span> <span className="purple">range</span>(0, i, 1):<br />
+                      <br />
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="red"># 3. printing stars on each row</span><br />
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="purple">print</span>(<span className="green">"*"</span>, end=<span className="green">" "</span>)<br />
+                      <br />
+                      &nbsp;&nbsp;&nbsp;&nbsp;<span className="red"># 4. moving to next line</span><br />
+                      &nbsp;&nbsp;&nbsp;&nbsp;<span className="purple">print</span>()
+                    </code>
+                  </pre>
+                </li>
+              </ul>
+            </li>
           </ul>
         </div>
       </section>
@@ -145,11 +172,9 @@ const LoopingControlStatements = () => {
                 <li>
                   <pre className="code-container">
                     <code className="code-wrapper">
-                      <span className="red"># Reading - input</span><br />
                       a = <span className="purple">int</span>(<span className="purple">input</span>(<span className="green">"Enter first number: "</span>))<br />
                       b = <span className="purple">int</span>(<span className="purple">input</span>(<span className="green">"Enter second number: "</span>))<br />
                       <br />
-                      <span className="red"># Printing - output</span><br />
                       <span className="orange">for</span> i <span className="orange">in</span> <span className="purple">range</span>(a + 1 , b, 1):<br />
                       &nbsp;&nbsp;&nbsp;&nbsp;<span className="purple">print</span>(i)
                     </code>
@@ -165,16 +190,31 @@ const LoopingControlStatements = () => {
                 <li>
                   <pre className="code-container">
                     <code className="code-wrapper">
-                      <span className="red"># Reading - input</span><br />
                       a = <span className="purple">int</span>(<span className="purple">input</span>(<span className="green">"Enter first number: "</span>))<br />
                       b = <span className="purple">int</span>(<span className="purple">input</span>(<span className="green">"Enter second number: "</span>))<br />
                       <br />
-                      <span className="red"># Printing - output</span><br />
                       <span className="orange">while</span> a &lt; b:<br />
                       &nbsp;&nbsp;&nbsp;&nbsp;<span className="purple">print</span>(a + 1)<br />
                       &nbsp;&nbsp;&nbsp;&nbsp;a += 1<br />
                       &nbsp;&nbsp;&nbsp;&nbsp;<span className="orange">if</span> (a == b - 1):<br />
                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="orange">break</span>
+                    </code>
+                  </pre>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li>
+                  <p>Q. Python code to print <span className="highlight">decreasing stars</span> using 'nested' loop</p>
+                </li>
+                <li>
+                  <pre className="code-container">
+                    <code className="code-wrapper">
+                      <span className="orange">for</span> i <span className="orange">in</span> <span className="purple">range</span>(5, 0, -1):<br />
+                      &nbsp;&nbsp;&nbsp;&nbsp;<span className="orange">for</span> j <span className="orange">in</span> <span className="purple">range</span>(i, 0, -1):<br />
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="purple">print</span>(<span className="green">"*"</span>, end=<span className="green">" "</span>)<br />
+                      &nbsp;&nbsp;&nbsp;&nbsp;<span className="purple">print</span>()
                     </code>
                   </pre>
                 </li>
@@ -190,7 +230,7 @@ const LoopingControlStatements = () => {
       <section className="step-section space-between section">
         <div className="wrapper">
           <Navigator path={"/control-statements/1"} label={"Branching"} position={"left"} />
-          <Navigator path={"/control-statements/3"} label={"Looping"} position={"right"} />
+          <Navigator path={"/tests/1"} label={"Test"} position={"right"} />
         </div>
       </section>
     );

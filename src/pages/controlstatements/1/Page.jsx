@@ -1,10 +1,7 @@
 import Divider from "../../../components/common/Divider";
 import Navigator from "../../../components/common/Navigator";
 
-import { useNavigate } from "react-router-dom";
-
 const BranchingControlStatements = () => {
-  const navigate = useNavigate();
   const HeroSection = () => {
     return (
       <section className="hero-section section">
@@ -151,11 +148,11 @@ const BranchingControlStatements = () => {
                       age = 17<br />
                       <br />
                       <span className="red"># 2. Program with a condtion</span><br />
-                      <span className="purple">if</span> (age &gt;= 18):<br />
+                      <span className="orange">if</span> (age &gt;= 18):<br />
                       &nbsp;&nbsp;&nbsp;&nbsp;<span className="purple">print</span>(<span className="green">"You are an adult."</span>)<br />
                       &nbsp;&nbsp;&nbsp;&nbsp;<span className="red"># This statement executes if the age is greater than or equal to 18</span><br />
                       <br />
-                      <span className="purple">else</span>:<br />
+                      <span className="orange">else</span>:<br />
                       &nbsp;&nbsp;&nbsp;&nbsp;<span className="purple">print</span>(<span className="green">"You are not an adult."</span>)<br />
                       &nbsp;&nbsp;&nbsp;&nbsp;<span className="red"># This statement executes if the age is lesser than 18</span>
                     </code>
@@ -166,7 +163,7 @@ const BranchingControlStatements = () => {
             <li>
               <ul>
                 <li>
-                  <p>Q. Python code to find <span className="highlignt">largest</span> of three numbers using 'multiple if'.</p>
+                  <p>Q. Python code to find <span className="highlight">largest</span> of three numbers using 'multiple if'.</p>
                 </li>
                 <li>
                   <pre className="code-container">
@@ -177,15 +174,15 @@ const BranchingControlStatements = () => {
                       c = 30<br />
                       <br />
                       <span className="red"># 2. Program with a condtions</span><br />
-                      <span className="purple">if</span> (a &gt; b) &amp;&amp; (a &gt; c):<br />
+                      <span className="orange">if</span> (a &gt; b) <span className="orange">and</span> (a &gt; c):<br />
                       &nbsp;&nbsp;&nbsp;&nbsp;<span className="purple">print</span>(<span className="green">"a is the largest number."</span>)<br />
                       &nbsp;&nbsp;&nbsp;&nbsp;<span className="red"># This statement executes if the value of a is greater than b and c</span><br />
                       <br />
-                      <span className="purple">elif</span> (b &gt; a) &amp;&amp; (b &gt; c):<br />
+                      <span className="orange">elif</span> (b &gt; a) <span className="orange">and</span> (b &gt; c):<br />
                       &nbsp;&nbsp;&nbsp;&nbsp;<span className="purple">print</span>(<span className="green">"b is the largest number."</span>)<br />
                       &nbsp;&nbsp;&nbsp;&nbsp;<span className="red"># This statement executes if the value of b is greater than a and c</span><br />
                       <br />
-                      <span className="purple">else</span>:<br />
+                      <span className="orange">else</span>:<br />
                       &nbsp;&nbsp;&nbsp;&nbsp;<span className="purple">print</span>(<span className="green">"c is the largest number."</span>)<br />
                       &nbsp;&nbsp;&nbsp;&nbsp;<span className="red"># This statement executes if the value of c is greater than a and b</span>
                     </code>
@@ -207,21 +204,21 @@ const BranchingControlStatements = () => {
                       c = 30<br />
                       <br />
                       <span className="red"># 2. Program with a condtions</span><br />
-                      <span className="purple">if</span> (a &lt; b):<br />
-                      &nbsp;&nbsp;&nbsp;&nbsp;<span className="purple">if</span> (a &lt; c):<br />
+                      <span className="orange">if</span> (a &lt; b):<br />
+                      &nbsp;&nbsp;&nbsp;&nbsp;<span className="orange">if</span> (a &lt; c):<br />
                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="purple">print</span>(<span className="green">"a is the smallest number."</span>)<br />
                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="red"># This statement executes if the value of a is lesser than b and c</span><br />
                       &nbsp;&nbsp;&nbsp;&nbsp;<br />
-                      &nbsp;&nbsp;&nbsp;&nbsp;<span className="purple">else</span>:<br />
+                      &nbsp;&nbsp;&nbsp;&nbsp;<span className="orange">else</span>:<br />
                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="purple">print</span>(<span className="green">"c is the smallest number."</span>)<br />
                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="red"># This statement executes if the value of c is lesser than b</span><br />
                       &nbsp;&nbsp;&nbsp;&nbsp;<br />
-                      <span className="purple">else</span>:<br />
-                      &nbsp;&nbsp;&nbsp;&nbsp;<span className="purple">if</span> (b &lt; c):<br />
+                      <span className="orange">else</span>:<br />
+                      &nbsp;&nbsp;&nbsp;&nbsp;<span className="orange">if</span> (b &lt; c):<br />
                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="purple">print</span>(<span className="green">"b is the smallest number."</span>)<br />
                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="red"># This statement executes if the value of b is lesser than a and c</span><br />
                       &nbsp;&nbsp;&nbsp;&nbsp;<br />
-                      &nbsp;&nbsp;&nbsp;&nbsp;<span className="purple">else</span>:<br />
+                      &nbsp;&nbsp;&nbsp;&nbsp;<span className="orange">else</span>:<br />
                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="purple">print</span>(<span className="green">"c is the smallest number."</span>)<br />
                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="red"># This statement executes if the value of c is lesser than a and b</span>
                     </code>
@@ -238,7 +235,7 @@ const BranchingControlStatements = () => {
     return (
       <section className="look-section section">
         <div className="wrapper">
-          <h3 className="fill-primary-secondary">Try yourself --</h3>
+          <h3 className="fill-primary-secondary">Try yourself</h3>
           <ul>
             <li>
               <ul>
@@ -248,11 +245,11 @@ const BranchingControlStatements = () => {
                 <li>
                   <pre className="code-container">
                     <code className="code-wrapper">
-                      number = <span className="purple">float</span>(<span className="purple">input</span>(<span className="green">"Enter a number: "</span>))<br />
+                      number = <span className="purple">int</span>(<span className="purple">input</span>(<span className="green">"Enter a number: "</span>))<br />
                       <br />
-                      <span className="purple">if</span> (number % 2 == 0):<br />
+                      <span className="orange">if</span> (number % 2 == 0):<br />
                       &nbsp;&nbsp;&nbsp;&nbsp;<span className="purple">print</span>(number,<span className="green">"is an even number."</span>)<br />
-                      <span className="purple">else</span>:<br />
+                      <span className="orange">else</span>:<br />
                       &nbsp;&nbsp;&nbsp;&nbsp;<span className="purple">print</span>(number,<span className="green">"is an odd number."</span>)
                     </code>
                   </pre>
@@ -262,21 +259,57 @@ const BranchingControlStatements = () => {
             <li>
               <ul>
                 <li>
-                  <p>Q. Python code to read two number and print numbers <span className="highlight">between</span> them using while loop.</p>
+                  <p>Q. Python code to find <span className="highlight">greatest</span> of three numbers using 'nested if'.</p>
                 </li>
                 <li>
                   <pre className="code-container">
                     <code className="code-wrapper">
-                      <span className="red"># Reading - input</span><br />
-                      a = <span className="purple">int</span>(<span className="purple">input</span>(<span className="green">"Enter first number: "</span>))<br />
-                      b = <span className="purple">int</span>(<span className="purple">input</span>(<span className="green">"Enter second number: "</span>))<br />
+                      a = 10<br />
+                      b = 20<br />
+                      c = 30<br />
                       <br />
-                      <span className="red"># Printing - output</span><br />
-                      <span className="orange">while</span> a &lt; b:<br />
-                      &nbsp;&nbsp;&nbsp;&nbsp;<span className="purple">print</span>(a + 1)<br />
-                      &nbsp;&nbsp;&nbsp;&nbsp;a += 1<br />
-                      &nbsp;&nbsp;&nbsp;&nbsp;<span className="orange">if</span> (a == b - 1):<br />
-                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="orange">break</span>
+                      <span className="orange">if</span> (a &gt; b):<br />
+                      &nbsp;&nbsp;&nbsp;&nbsp;<span className="orange">if</span> (a &gt; c):<br />
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="purple">print</span>(<span className="green">"a is the greatest number."</span>)<br />
+                      &nbsp;&nbsp;&nbsp;&nbsp;<br />
+                      &nbsp;&nbsp;&nbsp;&nbsp;<span className="orange">else</span>:<br />
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="purple">print</span>(<span className="green">"c is the greatest number."</span>)<br />
+                      &nbsp;&nbsp;&nbsp;&nbsp;<br />
+                      <span className="orange">else</span>:<br />
+                      &nbsp;&nbsp;&nbsp;&nbsp;<span className="orange">if</span> (b &gt; c):<br />
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="purple">print</span>(<span className="green">"b is the greatest number."</span>)<br />
+                      &nbsp;&nbsp;&nbsp;&nbsp;<br />
+                      &nbsp;&nbsp;&nbsp;&nbsp;<span className="orange">else</span>:<br />
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="purple">print</span>(<span className="green">"c is the greatest number."</span>)<br />
+                    </code>
+                  </pre>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li>
+                  <p>Q. Python code to give <span className="highlight">remarks</span> for the marks scored by the student using 'multiple if'.</p>
+                </li>
+                <li>
+                  <pre className="code-container">
+                    <code className="code-wrapper">
+                      marks = 95<br />
+                      <br />
+                      <span className="orange">if</span> (marks &gt;= 90):<br />
+                      &nbsp;&nbsp;&nbsp;&nbsp;<span className="purple">print</span>(<span className="green">"Distinction"</span>)<br />
+                      <br />
+                      <span className="orange">elif</span> (marks &lt; 90) <span className="orange">and</span> (marks &gt;= 75):<br />
+                      &nbsp;&nbsp;&nbsp;&nbsp;<span className="purple">print</span>(<span className="green">"First class"</span>)<br />
+                      <br />
+                      <span className="orange">elif</span> (marks &lt; 75) <span className="orange">and</span> (marks &gt;= 60):<br />
+                      &nbsp;&nbsp;&nbsp;&nbsp;<span className="purple">print</span>(<span className="green">"Second class"</span>)<br />
+                      <br />
+                      <span className="orange">elif</span> (marks &lt; 60) <span className="orange">and</span> (marks &gt;= 50):<br />
+                      &nbsp;&nbsp;&nbsp;&nbsp;<span className="purple">print</span>(<span className="green">"Third class"</span>)<br />
+                      <br />
+                      <span className="orange">else</span>:<br />
+                      &nbsp;&nbsp;&nbsp;&nbsp;<span className="purple">print</span>(<span className="green">"Failed"</span>)<br />
                     </code>
                   </pre>
                 </li>
