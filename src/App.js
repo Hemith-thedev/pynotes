@@ -2,6 +2,7 @@
 import "./App.css";
 
 import ThemeToggle from "./components/layout/ThemeToggle";
+import SideBar from "./components/layout/Sidebar";
 
 import Pages from "./data/Pages";
 
@@ -18,14 +19,17 @@ function App() {
     window.scrollTo(0, 0);
   }, [location.pathname]);
   return (
-    <>
-      <ThemeToggle />
-      <Routes location={location} key={location.pathname}>
-        {Pages.map((page, index) => (
-          <Route key={index} path={page.path} element={page.element} />
-        ))}
-      </Routes>
-    </>
+    <div className="app">
+      <SideBar />
+      <div className="content main-content">
+        <ThemeToggle />
+        <Routes location={location} key={location.pathname}>
+          {Pages.map((page, index) => (
+            <Route key={index} path={page.path} element={page.element} />
+          ))}
+        </Routes>
+      </div>
+    </div>
   );
 }
 

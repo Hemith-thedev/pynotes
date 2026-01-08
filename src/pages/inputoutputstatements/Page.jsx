@@ -150,7 +150,7 @@ const FirstProgramsPage = () => {
       <section className="step-section space-between section">
         <div className="wrapper">
           <Navigator path={"/basics"} label={"Basics"} position={"left"} />
-          <Navigator path={"/control-statements/1"} label={"Control statements"} position={"right"} />
+          <Navigator path={"/control-statements/branching"} label={"Control statements"} position={"right"} />
         </div>
       </section>
     );

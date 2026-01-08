@@ -180,7 +180,7 @@ const Test_1 = () => {
     return (
       <section className="step-section space-between section">
         <div className="wrapper">
-          <Navigator path={"/control-statements/2"} label={"Looping"} position={"left"} />
+          <Navigator path={"/control-statements/looping"} label={"Looping"} position={"left"} />
           <Navigator path={"/list"} label={"List"} position={"right"} />
         </div>
       </section>

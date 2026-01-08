@@ -229,7 +229,7 @@ const LoopingControlStatements = () => {
     return (
       <section className="step-section space-between section">
         <div className="wrapper">
-          <Navigator path={"/control-statements/1"} label={"Branching"} position={"left"} />
+          <Navigator path={"/control-statements/branching"} label={"Branching"} position={"left"} />
           <Navigator path={"/tests/1"} label={"Test"} position={"right"} />
         </div>
       </section>

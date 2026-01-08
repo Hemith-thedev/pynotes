@@ -33,12 +33,12 @@ const Pages = [
   {
     title: "Control Statements",
     element: <BranchingControlStatements />,
-    path: "/control-statements/1",
+    path: "/control-statements/branching",
   },
   {
     title: "Control Statements",
     element: <LoopingControlStatements />,
-    path: "/control-statements/2",
+    path: "/control-statements/looping",
   },
   {
     title: "Test",

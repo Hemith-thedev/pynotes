@@ -13,6 +13,7 @@ main.intro-page {
       align-items: center;
       background: none;
       color: var(--fg);
+      padding-bottom: 12rem;
     }
   }
 }

@@ -325,7 +325,7 @@ const BranchingControlStatements = () => {
       <section className="step-section space-between section">
         <div className="wrapper">
           <Navigator path={"/input-and-output-statements"} label={"IO Statements"} position={"left"} />
-          <Navigator path={"/control-statements/2"} label={"Looping"} position={"right"} />
+          <Navigator path={"/control-statements/looping"} label={"Looping"} position={"right"} />
         </div>
       </section>
     );
