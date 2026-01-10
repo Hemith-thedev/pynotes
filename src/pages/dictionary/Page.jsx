@@ -78,7 +78,7 @@ const Dictionary = () => {
       <section className="step-section space-between section">
         <div className="wrapper">
           <Navigator path={"/tuple"} label={"Tuple"} position={"left"} />
-          <Navigator path={"/list"} label={"List"} position={"right"} />
+          <Navigator path={"/functions"} label={"Functions"} position={"right"} />
         </div>
       </section>
     );

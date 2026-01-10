@@ -3,10 +3,7 @@ import "./Style.css";
 import Divider from "../../components/common/Divider";
 import Navigator from "../../components/common/Navigator";
 
-import { useNavigate } from "react-router-dom";
-
 const Intro = () => {
-  const navigate = useNavigate();
   const HeroSection = () => {
     return (
       <section className="hero-section section">
@@ -21,7 +18,7 @@ const Intro = () => {
     return (
       <section className="definition-section section">
         <div className="wrapper">
-          <h2>What is Python?</h2>
+          <h2 className="fill-primary-secondary">What is Python?</h2>
           <p>
             A popular programming language created by Guido Van Rossum in 1991.
           </p>
@@ -33,7 +30,7 @@ const Intro = () => {
     return (
       <section className="features-section section">
         <div className="wrapper">
-          <h2 className="fill-primary-secondary">Features of Python</h2>
+          <h2 className="fill-primary-secondary">Features</h2>
           <ul>
             <li>
               <p>
@@ -75,7 +72,7 @@ const Intro = () => {
     return (
       <section className="info-section section">
         <div className="wrapper">
-          <h2 className="fill-primary-secondary">Why use Python?</h2>
+          <h2 className="fill-primary-secondary">Why use it?</h2>
           <ul>
             <li>
               <p>

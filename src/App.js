@@ -11,6 +11,7 @@ import { Routes, Route, useLocation } from "react-router-dom";
 
 function App() {
   const location = useLocation();
+  const [isNavigatorOpen, setIsNavigatorOpen] = useState(true);
   useEffect(() => {
     const ActivePage = Pages.find((page) => location.pathname === page.path);
     document.title = `${ActivePage.title} | Pynotes`;
@@ -18,11 +19,20 @@ function App() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location.pathname]);
+  useEffect(() => {
+    if (isNavigatorOpen) {
+      document.querySelector("section.hero-section").classList.add("nav-open");
+    } else {
+      document.querySelector("section.hero-section").classList.remove("nav-open");
+    }
+  }, [isNavigatorOpen]);
   return (
     <div className="app">
-      <SideBar />
-      <div className="content main-content">
-        <ThemeToggle />
+      <SideBar isOpen={isNavigatorOpen} />
+      <div className={`content main-content ${isNavigatorOpen ? "nav-open" : ""}`}>
+        <ThemeToggle onNavigatorToggle={() => {
+          setIsNavigatorOpen(prev => !prev);
+        }} isNavigatorOpen={isNavigatorOpen} />
         <Routes location={location} key={location.pathname}>
           {Pages.map((page, index) => (
             <Route key={index} path={page.path} element={page.element} />

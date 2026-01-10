@@ -58,10 +58,13 @@ const NavButton = ({ path, label, isDropdown, buttonaArray }) => {
   }
 }
 
-const SideBar = () => {
+const SideBar = ({isOpen}) => {
   const location = useLocation();
   return (
-    <div className="sidebar">
+    <div className="sidebar" style={{
+      width: (isOpen) ? "30%" : "0%",
+      padding: `1rem ${(isOpen) ? "1rem" : "0"}`,
+    }}>
       <div className="wrapper">
         {location.pathname !== "/" && <div className="logo">
           <h5 className="fill-primary-secondary">Python</h5>
@@ -81,6 +84,8 @@ const SideBar = () => {
           <NavButton path="/list" label="List" />
           <NavButton path="/tuple" label="Tuple" />
           <NavButton path="/dictionary" label="Dictionary" />
+          <NavButton path="/functions" label="Functions" />
+          <NavButton path="/modules" label="Modules" />
         </ul>
       </div>
     </div>

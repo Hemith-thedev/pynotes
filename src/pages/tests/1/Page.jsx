@@ -4,7 +4,7 @@ import Navigator from "../../../components/common/Navigator";
 import { useState } from "react";
 import { X } from "lucide-react";
 
-const Test_1 = () => {
+const Test1 = () => {
   const [isPopuplOpen, setIsPopuplOpen] = useState(false);
   const HeroSection = () => {
     return (
@@ -198,4 +198,4 @@ const Test_1 = () => {
   )
 }
 
-export default Test_1;
+export default Test1;
