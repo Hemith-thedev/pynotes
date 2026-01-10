@@ -1,10 +1,7 @@
 import Divider from  "../../components/common/Divider";
 import Navigator from "../../components/common/Navigator";
 
-import { useNavigate } from "react-router-dom";
-
 const Basics = () => {
-  const navigate = useNavigate();
   const HeroSection = () => {
     return (
       <section className="hero-section section">

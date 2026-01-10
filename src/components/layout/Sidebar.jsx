@@ -64,7 +64,7 @@ const SideBar = ({isOpen}) => {
     <div className="sidebar" style={{
       width: (isOpen) ? "30%" : "0%",
       padding: `1rem ${(isOpen) ? "1rem" : "0"}`,
-    }}>
+    }} data-lenis-prevent>
       <div className="wrapper">
         {location.pathname !== "/" && <div className="logo">
           <h5 className="fill-primary-secondary">Python</h5>

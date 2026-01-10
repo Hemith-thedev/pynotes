@@ -3,10 +3,7 @@ import "./Style.css";
 import Divider from "../../components/common/Divider";
 import Navigator from "../../components/common/Navigator";
 
-import { useNavigate } from "react-router-dom";
-
 const Installation = () => {
-  const navigate = useNavigate();
   const HeroSection = () => {
     return (
       <section className="hero-section section">
@@ -36,7 +33,7 @@ const Installation = () => {
               <div className="image-wrapper">
                 <img
                   src="images/installation/1.png"
-                  alt="Installation image 1"
+                  alt="Installation 1"
                 />
               </div>
             </li>
@@ -53,7 +50,7 @@ const Installation = () => {
               <div className="image-wrapper">
                 <img
                   src="images/installation/2.png"
-                  alt="Installation image 2"
+                  alt="Installation 2"
                 />
               </div>
             </li>
@@ -65,7 +62,7 @@ const Installation = () => {
               <div className="image-wrapper">
                 <img
                   src="images/installation/3.png"
-                  alt="Installation image 3"
+                  alt="Installation 3"
                 />
               </div>
             </li>
