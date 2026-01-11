@@ -24,15 +24,18 @@ const ThemeToggle = ({ isNavigatorOpen, onNavigatorToggle }) => {
       <button
         onClick={() => {
           let UpdatedThemeLabel = document.body.classList.contains("light") ? "LIGHT" : "DARK";
+          let UpdatedGlowLabel = document.body.classList.contains("glow") ? "Glow: ON" : "Glow: OFF";
           if (BodyClass.contains("light")) {
             BodyClass.add("dark");
             BodyClass.remove("light");
+            BodyClass.remove("glow");
           } else if (BodyClass.contains("dark")) {
             BodyClass.add("light");
             BodyClass.remove("dark");
             BodyClass.remove("glow");
           }
           setThemeLabel(UpdatedThemeLabel);
+          setGlowLabel(UpdatedGlowLabel);
         }}
         className="primary theme">
         {themeLabel}

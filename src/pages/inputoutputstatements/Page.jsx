@@ -39,15 +39,6 @@ const FirstProgramsPage = () => {
       </section>
     );
   };
-  const ISExampleSection = () => {
-    return (
-      <section className="example-section section">
-        <div className="wrapper">
-          
-        </div>
-      </section>
-    );
-  };
   const OSInfoSection = () => {
     return (
       <section className="info-section section">
@@ -64,7 +55,7 @@ const FirstProgramsPage = () => {
           <h5 className="step">Example</h5>
           <ul className="step">
             <li>
-              <pre className="code-container">
+              <pre className="code-container" data-lenis-prevent>
                 <code className="code-wrapper">
                   name = <span className="purple">input</span>(<span className="green">"Enter your name: "</span>) <span className="red"># Alice</span>
                   <br /><span className="purple">print</span>(<span className="green">"Your name is: "</span> + name)
@@ -79,15 +70,6 @@ const FirstProgramsPage = () => {
       </section>
     );
   };
-  const OSExampleSection = () => {
-    return (
-      <section className="example-section section">
-        <div className="wrapper">
-          
-        </div>
-      </section>
-    );
-  };
   const LookSection = () => {
     return (
       <section className="look-section section">
@@ -98,7 +80,7 @@ const FirstProgramsPage = () => {
               <p>Q. Python code to print the name given by the user</p>
             </li>
             <li>
-              <pre className="code-container">
+              <pre className="code-container" data-lenis-prevent>
                 <code className="code-wrapper">
                   <span className="red"># 1. read name</span><br />
                   <span className="red"># initialize an input statement by defining it with a variable</span><br />
@@ -125,7 +107,7 @@ const FirstProgramsPage = () => {
               <p>Q. Python code to read two number and print their sum, product, difference & quotient.</p>
             </li>
             <li>
-              <pre className="code-container">
+              <pre className="code-container" data-lenis-prevent>
                 <code className="code-wrapper">
                   a = <span className="purple">int</span>(<span className="purple">input</span>(<span className="green">"Enter first number: "</span>))<br />
                   b = <span className="purple">int</span>(<span className="purple">input</span>(<span className="green">"Enter second number: "</span>))<br />
@@ -152,7 +134,7 @@ const FirstProgramsPage = () => {
       </section>
     );
   };
-  const Sections = [<HeroSection />, <ISInfoSection />, <ISExampleSection />, <OSInfoSection />, <OSExampleSection />, <LookSection />, <CodingTimeSection />, <Divider />, <StepSection />];
+  const Sections = [<HeroSection />, <ISInfoSection />, <OSInfoSection />, <LookSection />, <CodingTimeSection />, <Divider />, <StepSection />];
   return (
     <main className="io-statements-page">
       {Sections.map((section) => {

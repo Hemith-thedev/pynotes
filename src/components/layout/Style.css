@@ -61,6 +61,7 @@
           background-color: transparent;
           border: none;
           outline: none;
+          text-wrap: nowrap;
 
           &:hover,
           &:focus-visible,
@@ -106,7 +107,7 @@
           width: 100%;
           border-radius: 0.5rem;
           padding: 1rem;
-          color: var(--primary-d);
+          color: var(--primary-d);text-wrap: nowrap;
 
           & .icon {
             display: flex;

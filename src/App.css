@@ -185,7 +185,7 @@ span.highlight {
   &.code-container {
     max-width: 60vw;
     box-shadow: 0 0.5rem 1rem #00000030;
-    overflow-x: scroll;
+    overflow-x: auto;
 
     &::-webkit-scrollbar {
       background-color: var(--bg-d);

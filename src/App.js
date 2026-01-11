@@ -8,7 +8,6 @@ import Pages from "./data/Pages";
 
 import { useState, useEffect } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
-import Lenis from "lenis";
 
 function App() {
   const location = useLocation();
@@ -27,18 +26,6 @@ function App() {
       document.querySelector("section.hero-section").classList.remove("nav-open");
     }
   }, [isNavigatorOpen]);
-  useEffect(() => {
-    const lenis = new Lenis({
-      // fast scroll without delay
-      duration: 1.5,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-    });
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-    requestAnimationFrame(raf);
-  }, []);
   return (
     <div className="app">
       <SideBar isOpen={isNavigatorOpen} />
