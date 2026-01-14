@@ -1,5 +1,6 @@
 import Divider from "../../../components/common/Divider";
 import Navigator from "../../../components/common/Navigator";
+import CodeContainer from "../../../components/common/CodeContainer";
 
 import { useState } from "react";
 import { X } from "lucide-react";
@@ -21,7 +22,7 @@ const Test1 = () => {
         <div className="wrapper">
           <div className="head">
             <h1 className="fill-primary-secondary">Questions</h1>
-            <button  className="primary" onClick={() => setIsPopuplOpen(prev => !prev)}>
+            <button className="primary" onClick={() => setIsPopuplOpen(prev => !prev)}>
               <span>Answers</span>
             </button>
           </div>
@@ -49,7 +50,7 @@ const Test1 = () => {
       </section>
     );
   };
-  const Popup = ({isOpen}) => {
+  const Popup = ({ isOpen }) => {
     if (isOpen) {
       document.body.style.overflow = "hidden";
     } else {
@@ -72,15 +73,17 @@ const Test1 = () => {
                     <p>1. Python code to read three numbers, add first two numbers & subtract from the third number.</p>
                   </li>
                   <li>
-                    <pre className="code-container">
-                      <code className="code-wrapper">
+                    <CodeContainer id={"code-container-1"} hasHead={true} hasCopyFunction={false} codeType="python" Code={
+                      <>
                         a = <span className="purple">int</span>(<span className="purple">input</span>(<span className="green">"Enter first number: "</span>))<br />
                         b = <span className="purple">int</span>(<span className="purple">input</span>(<span className="green">"Enter second number: "</span>))<br />
                         c = <span className="purple">int</span>(<span className="purple">input</span>(<span className="green">"Enter third number: "</span>))<br />
+                        <br />
                         result = (a + b) - c<br />
+                        <br />
                         <span className="purple">print</span>(<span className="green">"Result: "</span>+<span className="purple">str</span>(result))
-                      </code>
-                    </pre>
+                      </>
+                    } isSelectable={false} />
                   </li>
                 </ul>
               </li>
@@ -90,12 +93,12 @@ const Test1 = () => {
                     <p>2. Python code to print even numbers from <span className="highlight">100 - 1</span>.</p>
                   </li>
                   <li>
-                    <pre className="code-container">
-                      <code className="code-wrapper">
+                    <CodeContainer id={"code-container-1"} hasHead={true} hasCopyFunction={false} codeType="python" Code={
+                      <>
                         <span className="orange">for</span> i <span className="orange">in</span> <span className="purple">range</span>(100, 0, -2):<br />
                         &nbsp;&nbsp;&nbsp;&nbsp;<span className="purple">print</span>(i)
-                      </code>
-                    </pre>
+                      </>
+                    } isSelectable={false} />
                   </li>
                 </ul>
               </li>
@@ -105,14 +108,14 @@ const Test1 = () => {
                     <p>3. Python code to print <span className="highlight">decreasing stars</span> from 10.</p>
                   </li>
                   <li>
-                    <pre className="code-container">
-                      <code className="code-wrapper">
+                    <CodeContainer id={"code-container-1"} hasHead={true} hasCopyFunction={false} codeType="python" Code={
+                      <>
                         <span className="orange">for</span> i <span className="orange">in</span> <span className="purple">range</span>(10, 0, -1):<br />
                         &nbsp;&nbsp;&nbsp;&nbsp;<span className="orange">for</span> j <span className="orange">in</span> <span className="purple">range</span>(i, 0, -1):<br />
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="purple">print</span>(<span className="green">"*"</span>, end=<span className="green">" "</span>)<br />
                         &nbsp;&nbsp;&nbsp;&nbsp;<span className="purple">print</span>()
-                      </code>
-                    </pre>
+                      </>
+                    } isSelectable={false} />
                   </li>
                 </ul>
               </li>
@@ -122,15 +125,15 @@ const Test1 = () => {
                     <p>4. Python code to check weather the student is <span className="highlight">passed or failed</span> in exam. <span className="highlight">(Hint: passing marks &gt;= 40)</span></p>
                   </li>
                   <li>
-                    <pre className="code-container">
-                      <code className="code-wrapper">
+                    <CodeContainer id={"code-container-1"} hasHead={true} hasCopyFunction={false} codeType="python" Code={
+                      <>
                         marks = 85<br />
                         <span className="orange">if</span> (marks &gt;= 40):<br />
                         &nbsp;&nbsp;&nbsp;&nbsp;<span className="purple">print</span>(<span className="green">"Passed"</span>)<br />
                         <span className="orange">else</span>:<br />
                         &nbsp;&nbsp;&nbsp;&nbsp;<span className="purple">print</span>(<span className="green">"Failed"</span>)<br />
-                      </code>
-                    </pre>
+                      </>
+                    } isSelectable={false} />
                   </li>
                 </ul>
               </li>
@@ -140,15 +143,15 @@ const Test1 = () => {
                     <p>5. Python code to print even numbers from <span className="highlight">1 - 100</span> using while loop.</p>
                   </li>
                   <li>
-                    <pre className="code-container">
-                      <code className="code-wrapper">
+                    <CodeContainer id={"code-container-1"} hasHead={true} hasCopyFunction={false} codeType="python" Code={
+                      <>
                         number = 1<br />
                         <span className="orange">while</span> number &gt;= 100:<br />
                         &nbsp;&nbsp;&nbsp;&nbsp;<span className="orange">if</span> number % 2 == 0:<br />
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="purple">print</span>(number)<br />
                         &nbsp;&nbsp;&nbsp;&nbsp;number += 1
-                      </code>
-                    </pre>
+                      </>
+                    } isSelectable={false} />
                   </li>
                 </ul>
               </li>
@@ -158,15 +161,15 @@ const Test1 = () => {
                     <p>6. Python code to read a number and print <span className="highlight">increasing stars</span> from 0 - number.</p>
                   </li>
                   <li>
-                    <pre className="code-container">
-                      <code className="code-wrapper">
+                    <CodeContainer id={"code-container-1"} hasHead={true} hasCopyFunction={false} codeType="python" Code={
+                      <>
                         n = <span className="purple">int</span>(<span className="purple">input</span>(<span className="green">"Enter a number: "</span>))<br />
                         <span className="orange">for</span> i <span className="orange">in</span> <span className="purple">range</span>(0, n + 1, 1):<br />
                         &nbsp;&nbsp;&nbsp;&nbsp;<span className="orange">for</span> j <span className="orange">in</span> <span className="purple">range</span>(0, i, 1):<br />
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="purple">print</span>(<span className="green">"*"</span>, end=<span className="green">" "</span>)<br />
                         &nbsp;&nbsp;&nbsp;&nbsp;<span className="purple">print</span>()
-                      </code>
-                    </pre>
+                      </>
+                    } isSelectable={false} />
                   </li>
                 </ul>
               </li>
@@ -186,7 +189,7 @@ const Test1 = () => {
       </section>
     );
   };
-  const Sections = [<HeroSection />, <QuestionPaper />, <Divider />,  <StepSection />, <Popup isOpen={isPopuplOpen} />];
+  const Sections = [<HeroSection />, <QuestionPaper />, <Divider />, <StepSection />, <Popup isOpen={isPopuplOpen} />];
   return (
     <main className="test-1-page">
       {

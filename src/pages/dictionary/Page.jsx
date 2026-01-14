@@ -1,5 +1,6 @@
 import Divider from "../../components/common/Divider";
 import Navigator from "../../components/common/Navigator";
+import CodeContainer from "../../components/common/CodeContainer";
 
 const Dictionary = () => {
   const HeroSection = () => {
@@ -36,37 +37,37 @@ const Dictionary = () => {
               <h5>Example</h5>
             </li>
             <li>
-              <pre className="code-container">
-                <code className="code-wrapper">
+              <CodeContainer id={"code-container-1"} hasHead={true} hasCopyFunction={true} codeType="python" Code={
+                <>
                   student = {"{"}<br />
                   &nbsp;&nbsp;&nbsp;&nbsp;<span className="green">"name"</span>: <span className="green">"John"</span>,<br />
                   &nbsp;&nbsp;&nbsp;&nbsp;<span className="green">"age"</span>: 20,<br />
                   &nbsp;&nbsp;&nbsp;&nbsp;<span className="green">"gender"</span>: <span className="green">"Male"</span><br />
                   {"}"}
-                </code>
-              </pre>
+                </>
+              } />
             </li>
             <li>
               <h5>Iteration of all keys & values</h5>
             </li>
             <li>
-              <pre className="code-container">
-                <code className="code-wrapper">
+              <CodeContainer id={"code-container-1"} hasHead={true} hasCopyFunction={true} codeType="python" Code={
+                <>
                   <span className="orange">for</span> key, value <span className="orange">in</span> student.items():<br />
                   &nbsp;&nbsp;&nbsp;&nbsp;<span className="purple">print</span>(<span className="green">"key: "</span>, key, <span className="green">", value: "</span>, value)
-                </code>
-              </pre>
+                </>
+              } />
             </li>
             <li>
               <h5>Iteration using specific key</h5>
             </li>
             <li>
-              <pre className="code-container">
-                <code className="code-wrapper">
+              <CodeContainer id={"code-container-1"} hasHead={true} hasCopyFunction={true} codeType="python" Code={
+                <>
                   student_age = student[<span className="green">"age"</span>]<br />
                   <span className="purple">print</span>(<span className="green">"Student's age:"</span>, <span className="purple">str</span>(student_age))
-                </code>
-              </pre>
+                </>
+              } />
             </li>
           </ul>
         </div>
@@ -83,7 +84,7 @@ const Dictionary = () => {
       </section>
     );
   };
-  const Sections = [<HeroSection />,<DefinitionSection />, <Divider />, <StepSection />];
+  const Sections = [<HeroSection />, <DefinitionSection />, <Divider />, <StepSection />];
   return (
     <main className="tuple-page">
       {

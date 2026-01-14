@@ -42,6 +42,7 @@ body {
     --bg: var(--color-l-o);
     --fg: var(--color-d-o);
     --bg-d: var(--color-l-d);
+    --bg-d-t: hsla(0, 0%, 80%, 0.3);
     --fg-d: var(--color-d-d);
     --primary-o: var(--color-p-o);
     --primary-l: var(--color-p-l);
@@ -77,6 +78,7 @@ body {
     --bg: var(--color-d-o);
     --fg: var(--color-l-o);
     --bg-d: var(--color-d-l);
+    --bg-d-t: hsla(0, 0%, 20%, 0.3);
     --fg-d: var(--color-l-d);
     --primary-o: var(--color-s-o);
     --primary-l: var(--color-s-l);
@@ -178,24 +180,60 @@ span.highlight {
 
 .code-container,
 .single-line-code {
+  position: relative;
   padding: 1rem;
   border-radius: 1rem;
   font-size: 1.25rem;
 
+  & .head {
+    position: sticky;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: fit-content;
+    width: 100%;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -1rem;
+      left: -1rem;
+      height: calc(100% + 2rem);
+      width: calc(100% + 2rem);
+      background-color: var(--bg-d-t);
+      z-index: -1;
+      backdrop-filter: blur(30px);
+    }
+  }
+
   &.code-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 1rem;
+    max-height: 70vh;
     max-width: 60vw;
     box-shadow: 0 0.5rem 1rem #00000030;
     overflow-x: auto;
 
     &::-webkit-scrollbar {
       background-color: var(--bg-d);
-      border-bottom-left-radius: 1rem;
-      border-bottom-right-radius: 1rem;
+      border-bottom-left-radius: 0.5rem;
+      border-top-right-radius: 0.5rem;
     }
 
     &::-webkit-scrollbar-thumb {
       background-color: var(--primary-o);
       border-color: var(--bg-d);
+    }
+
+    &::-webkit-scrollbar-corner {
+      display: none;
     }
   }
 

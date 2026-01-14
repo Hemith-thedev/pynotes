@@ -87,6 +87,7 @@ const SideBar = ({isOpen}) => {
           <NavButton path="/functions" label="Functions" />
           <NavButton path="/modules" label="Modules" />
           <NavButton path="/tests/2" label="Test - 2" />
+          <NavButton path="/libraries/numpy" label="Numpy" />
         </ul>
       </div>
     </div>

@@ -1,5 +1,6 @@
 import Divider from "../../../components/common/Divider";
 import Navigator from "../../../components/common/Navigator";
+import CodeContainer from "../../../components/common/CodeContainer";
 
 const BranchingControlStatements = () => {
   const HeroSection = () => {
@@ -66,14 +67,14 @@ const BranchingControlStatements = () => {
                       <p><span className="highlight">Simple if</span></p>
                     </li>
                     <li>
-                      <pre className="code-container">
-                        <code className="code-wrapper">
+                      <CodeContainer id={"code-container-1"} hasHead={false} hasCopyFunction={false} codeType="python" Code={
+                        <>
                           <span className="purple">if</span> condition:<br />
                           &nbsp;&nbsp;&nbsp;&nbsp;statements<br />
                           <span className="purple">else</span>:<br />
                           &nbsp;&nbsp;&nbsp;&nbsp;statements
-                        </code>
-                      </pre>
+                        </>
+                      } />
                     </li>
                   </ul>
                 </li>
@@ -83,8 +84,8 @@ const BranchingControlStatements = () => {
                       <p><span className="highlight">Multiple if</span></p>
                     </li>
                     <li>
-                      <pre className="code-container">
-                        <code className="code-wrapper">
+                      <CodeContainer id={"code-container-1"} hasHead={false} hasCopyFunction={false} codeType="python" Code={
+                        <>
                           <span className="purple">if</span> condition_1:<br />
                           &nbsp;&nbsp;&nbsp;&nbsp;statements<br />
                           <span className="purple">elif</span> condition_2:<br />
@@ -96,8 +97,8 @@ const BranchingControlStatements = () => {
                           .<br />
                           <span className="purple">else</span>:<br />
                           &nbsp;&nbsp;&nbsp;&nbsp;statements
-                        </code>
-                      </pre>
+                        </>
+                      } />
                     </li>
                   </ul>
                 </li>
@@ -107,8 +108,8 @@ const BranchingControlStatements = () => {
                       <p><span className="highlight">Nested if</span></p>
                     </li>
                     <li>
-                      <pre className="code-container">
-                        <code className="code-wrapper">
+                      <CodeContainer id={"code-container-1"} hasHead={false} hasCopyFunction={false} codeType="python" Code={
+                        <>
                           <span className="purple">if</span> condition_1:<br />
                           &nbsp;&nbsp;&nbsp;&nbsp;statements<br />
                           &nbsp;&nbsp;&nbsp;&nbsp;<span className="purple">if</span> condition_2:<br />
@@ -117,8 +118,8 @@ const BranchingControlStatements = () => {
                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;statements<br />
                           <span className="purple">else</span>:<br />
                           &nbsp;&nbsp;&nbsp;&nbsp;statements
-                        </code>
-                      </pre>
+                        </>
+                      } />
                     </li>
                   </ul>
                 </li>
@@ -141,8 +142,8 @@ const BranchingControlStatements = () => {
                   <p>Q. Python code to check if a person is an <span className="highlight">adult</span> using 'simple if'.</p>
                 </li>
                 <li>
-                  <pre className="code-container">
-                    <code className="code-wrapper">
+                  <CodeContainer id={"code-container-1"} hasHead={true} hasCopyFunction={true} codeType={"python"} Code={
+                    <>
                       <span className="red"># Hint: adult = (age &gt;= 18)</span><br />
                       <span className="red"># 1. Initialize a variable</span><br />
                       age = 17<br />
@@ -155,8 +156,8 @@ const BranchingControlStatements = () => {
                       <span className="orange">else</span>:<br />
                       &nbsp;&nbsp;&nbsp;&nbsp;<span className="purple">print</span>(<span className="green">"You are not an adult."</span>)<br />
                       &nbsp;&nbsp;&nbsp;&nbsp;<span className="red"># This statement executes if the age is lesser than 18</span>
-                    </code>
-                  </pre>
+                    </>
+                  } />
                 </li>
               </ul>
             </li>
@@ -166,8 +167,8 @@ const BranchingControlStatements = () => {
                   <p>Q. Python code to find <span className="highlight">largest</span> of three numbers using 'multiple if'.</p>
                 </li>
                 <li>
-                  <pre className="code-container">
-                    <code className="code-wrapper">
+                  <CodeContainer id={"code-container-1"} hasHead={true} hasCopyFunction={true} codeType={"python"} Code={
+                    <>
                       <span className="red"># 1. Initialize variables</span><br />
                       a = 10<br />
                       b = 20<br />
@@ -185,8 +186,8 @@ const BranchingControlStatements = () => {
                       <span className="orange">else</span>:<br />
                       &nbsp;&nbsp;&nbsp;&nbsp;<span className="purple">print</span>(<span className="green">"c is the largest number."</span>)<br />
                       &nbsp;&nbsp;&nbsp;&nbsp;<span className="red"># This statement executes if the value of c is greater than a and b</span>
-                    </code>
-                  </pre>
+                    </>
+                  } />
                 </li>
               </ul>
             </li>
@@ -196,8 +197,8 @@ const BranchingControlStatements = () => {
                   <p>Q. Python code to find <span className="highlight">smallest</span> of three numbers using 'nested if'.</p>
                 </li>
                 <li>
-                  <pre className="code-container">
-                    <code className="code-wrapper">
+                  <CodeContainer id={"code-container-1"} hasHead={true} hasCopyFunction={true} codeType="python" Code={
+                    <>
                       <span className="red"># 1. Initialize variables</span><br />
                       a = 10<br />
                       b = 20<br />
@@ -221,8 +222,8 @@ const BranchingControlStatements = () => {
                       &nbsp;&nbsp;&nbsp;&nbsp;<span className="orange">else</span>:<br />
                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="purple">print</span>(<span className="green">"c is the smallest number."</span>)<br />
                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="red"># This statement executes if the value of c is lesser than a and b</span>
-                    </code>
-                  </pre>
+                    </>
+                  } />
                 </li>
               </ul>
             </li>
@@ -243,16 +244,16 @@ const BranchingControlStatements = () => {
                   <p>Q. Python code to read a number and check weather it is <span className="highlight">even or odd</span> using 'simple if'.</p>
                 </li>
                 <li>
-                  <pre className="code-container">
-                    <code className="code-wrapper">
+                  <CodeContainer id={"code-container-2"} hasHead={true} hasCopyFunction={false} codeType="python" Code={
+                    <>
                       number = <span className="purple">int</span>(<span className="purple">input</span>(<span className="green">"Enter a number: "</span>))<br />
                       <br />
                       <span className="orange">if</span> (number % 2 == 0):<br />
                       &nbsp;&nbsp;&nbsp;&nbsp;<span className="purple">print</span>(number,<span className="green">"is an even number."</span>)<br />
                       <span className="orange">else</span>:<br />
                       &nbsp;&nbsp;&nbsp;&nbsp;<span className="purple">print</span>(number,<span className="green">"is an odd number."</span>)
-                    </code>
-                  </pre>
+                    </>
+                  } isSelectable={false} />
                 </li>
               </ul>
             </li>
@@ -262,8 +263,8 @@ const BranchingControlStatements = () => {
                   <p>Q. Python code to find <span className="highlight">greatest</span> of three numbers using 'nested if'.</p>
                 </li>
                 <li>
-                  <pre className="code-container">
-                    <code className="code-wrapper">
+                  <CodeContainer id={"code-container-2"} hasHead={true} hasCopyFunction={false} codeType="python" Code={
+                    <>
                       a = 10<br />
                       b = 20<br />
                       c = 30<br />
@@ -281,8 +282,8 @@ const BranchingControlStatements = () => {
                       &nbsp;&nbsp;&nbsp;&nbsp;<br />
                       &nbsp;&nbsp;&nbsp;&nbsp;<span className="orange">else</span>:<br />
                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="purple">print</span>(<span className="green">"c is the greatest number."</span>)<br />
-                    </code>
-                  </pre>
+                    </>
+                  } isSelectable={false} />
                 </li>
               </ul>
             </li>
@@ -292,8 +293,8 @@ const BranchingControlStatements = () => {
                   <p>Q. Python code to give <span className="highlight">remarks</span> for the marks scored by the student using 'multiple if'.</p>
                 </li>
                 <li>
-                  <pre className="code-container">
-                    <code className="code-wrapper">
+                  <CodeContainer id={"code-container-2"} hasHead={true} hasCopyFunction={false} codeType="python" Code={
+                    <>
                       marks = 95<br />
                       <br />
                       <span className="orange">if</span> (marks &gt;= 90):<br />
@@ -310,8 +311,8 @@ const BranchingControlStatements = () => {
                       <br />
                       <span className="orange">else</span>:<br />
                       &nbsp;&nbsp;&nbsp;&nbsp;<span className="purple">print</span>(<span className="green">"Failed"</span>)<br />
-                    </code>
-                  </pre>
+                    </>
+                  } isSelectable={false} />
                 </li>
               </ul>
             </li>

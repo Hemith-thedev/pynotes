@@ -1,5 +1,6 @@
 import Divider from "../../components/common/Divider";
 import Navigator from "../../components/common/Navigator";
+import CodeContainer from "../../components/common/CodeContainer";
 
 const List = () => {
   const HeroSection = () => {
@@ -33,33 +34,33 @@ const List = () => {
               <h5>Example</h5>
             </li>
             <li>
-              <pre className="code-container">
-                <code className="code-wrapper">
+              <CodeContainer id={"code-container-1"} hasHead={true} hasCopyFunction={true} codeType="python" Code={
+                <>
                   cars = [<span className="green">"BMW"</span>, <span className="green">"Lamborghini"</span>, <span className="green">"Rolls Royce"</span>, <span className="green">"Dodge"</span>]
-                </code>
-              </pre>
+                </>
+              } />
             </li>
             <li>
               <h5>Iteration of all items</h5>
             </li>
             <li>
-              <pre className="code-container">
-                <code className="code-wrapper">
+              <CodeContainer id={"code-container-1"} hasHead={true} hasCopyFunction={true} codeType="python" Code={
+                <>
                   <span className="orange">for</span> car <span className="orange">in</span> cars:<br />
                   &nbsp;&nbsp;&nbsp;&nbsp;<span className="purple">print</span>(car)
-                </code>
-              </pre>
+                </>
+              } />
             </li>
             <li>
               <h5>Iteration using specific index</h5>
             </li>
             <li>
-              <pre className="code-container">
-                <code className="code-wrapper">
+              <CodeContainer id={"code-container-1"} hasHead={true} hasCopyFunction={true} codeType="python" Code={
+                <>
                   my_car = cars[0]<br />
                   <span className="purple">print</span>(<span className="green">"My car:"</span>, my_car)
-                </code>
-              </pre>
+                </>
+              } />
             </li>
           </ul>
         </div>
@@ -76,7 +77,7 @@ const List = () => {
       </section>
     );
   };
-  const Sections = [<HeroSection />,<DefinitionSection />, <Divider />, <StepSection />];
+  const Sections = [<HeroSection />, <DefinitionSection />, <Divider />, <StepSection />];
   return (
     <main className="list-page">
       {

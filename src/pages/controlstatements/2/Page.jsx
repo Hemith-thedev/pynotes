@@ -1,5 +1,6 @@
 import Divider from "../../../components/common/Divider";
 import Navigator from "../../../components/common/Navigator";
+import CodeContainer from "../../../components/common/CodeContainer";
 
 const LoopingControlStatements = () => {
   const HeroSection = () => {
@@ -41,15 +42,15 @@ const LoopingControlStatements = () => {
                       <p><span className="highlight">For loop</span></p>
                     </li>
                     <li>
-                      <pre className="code-container">
-                        <code className="code-wrapper">
+                      <CodeContainer id={"code-container-1"} hasHead={false} hasCopyFunction={false} codeType="python" Code={
+                        <>
                           <span className="red"># ir - initializing range</span><br />
                           <span className="red"># er - ending range</span><br />
                           <span className="red"># sr - skipping range</span><br />
                           <span className="orange">for</span> var <span className="orange">in</span> <span className="purple">range</span>(ir, er + 1, sr):<br />
                           &nbsp;&nbsp;&nbsp;&nbsp;statements
-                        </code>
-                      </pre>
+                        </>
+                      } />
                     </li>
                   </ul>
                 </li>
@@ -59,12 +60,12 @@ const LoopingControlStatements = () => {
                       <p><span className="highlight">While loop</span></p>
                     </li>
                     <li>
-                      <pre className="code-container">
-                        <code className="code-wrapper">
+                      <CodeContainer id={"code-container-1"} hasHead={false} hasCopyFunction={false} codeType="python" Code={
+                        <>
                           <span className="orange">while</span> condition:<br />
                           &nbsp;&nbsp;&nbsp;&nbsp;statements
-                        </code>
-                      </pre>
+                        </>
+                      } />
                     </li>
                   </ul>
                 </li>
@@ -87,8 +88,8 @@ const LoopingControlStatements = () => {
                   <p>Q. Python code to print numbers from <span className="highlight">1 - 10</span> using 'for' loop</p>
                 </li>
                 <li>
-                  <pre className="code-container">
-                    <code className="code-wrapper">
+                  <CodeContainer id={"code-container-1"} hasHead={true} hasCopyFunction={true} codeType="python" Code={
+                    <>
                       <span className="red"># 1. Implement for loop</span><br />
                       <span className="orange">for</span> count <span className="orange">in</span> <span className="purple">range</span>(1, 11, 1):<br />
                       <br />
@@ -97,8 +98,8 @@ const LoopingControlStatements = () => {
                       &nbsp;&nbsp;&nbsp;&nbsp;<br />
                       &nbsp;&nbsp;&nbsp;&nbsp;<span className="red"># 3. Increment the varible value by 1</span><br />
                       &nbsp;&nbsp;&nbsp;&nbsp;count += 1
-                    </code>
-                  </pre>
+                    </>
+                  } />
                 </li>
               </ul>
             </li>
@@ -108,8 +109,8 @@ const LoopingControlStatements = () => {
                   <p>Q. Python code to print numbers from <span className="highlight">10 - 1</span> using 'while' loop</p>
                 </li>
                 <li>
-                  <pre className="code-container">
-                    <code className="code-wrapper">
+                  <CodeContainer id={"code-container-1"} hasHead={true} hasCopyFunction={true} codeType="python" Code={
+                    <>
                       <span className="red"># 1. Initialize a variable</span><br />
                       count = 10<br />
                       <br />
@@ -121,8 +122,8 @@ const LoopingControlStatements = () => {
                       &nbsp;&nbsp;&nbsp;&nbsp;<br />
                       &nbsp;&nbsp;&nbsp;&nbsp;<span className="red"># 4. Decrement the variable by 1</span><br />
                       &nbsp;&nbsp;&nbsp;&nbsp;count -= 1
-                    </code>
-                  </pre>
+                    </>
+                  } />
                 </li>
               </ul>
             </li>
@@ -132,8 +133,8 @@ const LoopingControlStatements = () => {
                   <p>Q. Python code to print <span className="highlight">increasing stars</span> using 'nested' loop</p>
                 </li>
                 <li>
-                  <pre className="code-container">
-                    <code className="code-wrapper">
+                  <CodeContainer id={"code-container-1"} hasHead={true} hasCopyFunction={true} codeType="python" Code={
+                    <>
                       <span className="red"># 1. Setting row range</span><br />
                       <span className="orange">for</span> i <span className="orange">in</span> <span className="purple">range</span>(0, 6, 1):<br />
                       <br />
@@ -145,8 +146,8 @@ const LoopingControlStatements = () => {
                       <br />
                       &nbsp;&nbsp;&nbsp;&nbsp;<span className="red"># 4. moving to next line</span><br />
                       &nbsp;&nbsp;&nbsp;&nbsp;<span className="purple">print</span>()
-                    </code>
-                  </pre>
+                    </>
+                  } />
                 </li>
               </ul>
             </li>
@@ -167,15 +168,15 @@ const LoopingControlStatements = () => {
                   <p>Q. Python code to read two number and print numbers <span className="highlight">between</span> them using for loop.</p>
                 </li>
                 <li>
-                  <pre className="code-container">
-                    <code className="code-wrapper">
+                  <CodeContainer id={"code-container-1"} hasHead={true} hasCopyFunction={false} codeType="python" Code={
+                    <>
                       a = <span className="purple">int</span>(<span className="purple">input</span>(<span className="green">"Enter first number: "</span>))<br />
                       b = <span className="purple">int</span>(<span className="purple">input</span>(<span className="green">"Enter second number: "</span>))<br />
                       <br />
                       <span className="orange">for</span> i <span className="orange">in</span> <span className="purple">range</span>(a + 1 , b, 1):<br />
                       &nbsp;&nbsp;&nbsp;&nbsp;<span className="purple">print</span>(i)
-                    </code>
-                  </pre>
+                    </>
+                  } isSelectable={false} />
                 </li>
               </ul>
             </li>
@@ -185,8 +186,8 @@ const LoopingControlStatements = () => {
                   <p>Q. Python code to read two number and print numbers <span className="highlight">between</span> them using while loop.</p>
                 </li>
                 <li>
-                  <pre className="code-container">
-                    <code className="code-wrapper">
+                  <CodeContainer id={"code-container-1"} hasHead={true} hasCopyFunction={false} codeType="python" Code={
+                    <>
                       a = <span className="purple">int</span>(<span className="purple">input</span>(<span className="green">"Enter first number: "</span>))<br />
                       b = <span className="purple">int</span>(<span className="purple">input</span>(<span className="green">"Enter second number: "</span>))<br />
                       <br />
@@ -195,8 +196,8 @@ const LoopingControlStatements = () => {
                       &nbsp;&nbsp;&nbsp;&nbsp;a += 1<br />
                       &nbsp;&nbsp;&nbsp;&nbsp;<span className="orange">if</span> (a == b - 1):<br />
                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="orange">break</span>
-                    </code>
-                  </pre>
+                    </>
+                  } isSelectable={false} />
                 </li>
               </ul>
             </li>
@@ -206,14 +207,14 @@ const LoopingControlStatements = () => {
                   <p>Q. Python code to print <span className="highlight">decreasing stars</span> using 'nested' loop</p>
                 </li>
                 <li>
-                  <pre className="code-container">
-                    <code className="code-wrapper">
+                  <CodeContainer id={"code-container-1"} hasHead={true} hasCopyFunction={false} codeType="python" Code={
+                    <>
                       <span className="orange">for</span> i <span className="orange">in</span> <span className="purple">range</span>(5, 0, -1):<br />
                       &nbsp;&nbsp;&nbsp;&nbsp;<span className="orange">for</span> j <span className="orange">in</span> <span className="purple">range</span>(i, 0, -1):<br />
                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="purple">print</span>(<span className="green">"*"</span>, end=<span className="green">" "</span>)<br />
                       &nbsp;&nbsp;&nbsp;&nbsp;<span className="purple">print</span>()
-                    </code>
-                  </pre>
+                    </>
+                  } isSelectable={false} />
                 </li>
               </ul>
             </li>

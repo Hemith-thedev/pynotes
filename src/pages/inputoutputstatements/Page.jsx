@@ -1,5 +1,6 @@
 import Divider from "../../components/common/Divider";
 import Navigator from "../../components/common/Navigator";
+import CodeContainer from "../../components/common/CodeContainer";
 
 const FirstProgramsPage = () => {
   const HeroSection = () => {
@@ -55,12 +56,12 @@ const FirstProgramsPage = () => {
           <h5 className="step">Example</h5>
           <ul className="step">
             <li>
-              <pre className="code-container" data-lenis-prevent>
-                <code className="code-wrapper">
+              <CodeContainer id={"code-container-1"} hasHead={true} hasCopyFunction={true} codeType="python" Code={
+                <>
                   name = <span className="purple">input</span>(<span className="green">"Enter your name: "</span>) <span className="red"># Alice</span>
                   <br /><span className="purple">print</span>(<span className="green">"Your name is: "</span> + name)
-                </code>
-              </pre>
+                </>
+              } />
             </li>
             <li>
               <p>This program prints the value of <code className="single-line-code">name</code>.</p>
@@ -80,8 +81,8 @@ const FirstProgramsPage = () => {
               <p>Q. Python code to print the name given by the user</p>
             </li>
             <li>
-              <pre className="code-container" data-lenis-prevent>
-                <code className="code-wrapper">
+              <CodeContainer id={"code-container-1"} hasHead={true} hasCopyFunction={true} codeType="python" Code={
+                <>
                   <span className="red"># 1. read name</span><br />
                   <span className="red"># initialize an input statement by defining it with a variable</span><br />
                   name = <span className="purple">input</span>(<span className="green">"Enter your name: "</span>)<br />
@@ -89,8 +90,8 @@ const FirstProgramsPage = () => {
                   <span className="red"># 2. print the value of name</span><br />
                   <span className="red"># read & print the value stored in the variable using print function</span><br />
                   <span className="purple">print</span>(<span className="green">"Your name: "</span> + name)
-                </code>
-              </pre>
+                </>
+              } />
             </li>
           </ul>
         </div>
@@ -107,8 +108,8 @@ const FirstProgramsPage = () => {
               <p>Q. Python code to read two number and print their sum, product, difference & quotient.</p>
             </li>
             <li>
-              <pre className="code-container" data-lenis-prevent>
-                <code className="code-wrapper">
+              <CodeContainer id={"code-container-1"} hasHead={true} hasCopyFunction={false} codeType="python" Code={
+                <>
                   a = <span className="purple">int</span>(<span className="purple">input</span>(<span className="green">"Enter first number: "</span>))<br />
                   b = <span className="purple">int</span>(<span className="purple">input</span>(<span className="green">"Enter second number: "</span>))<br />
                   <br />
@@ -116,8 +117,8 @@ const FirstProgramsPage = () => {
                   <span className="purple">print</span>(<span className="green">"Product: "</span> + <span className="purple">str</span>(a * b))<br />
                   <span className="purple">print</span>(<span className="green">"Difference: "</span> + <span className="purple">str</span>(a - b))<br />
                   <span className="purple">print</span>(<span className="green">"Quotient: "</span> + <span className="purple">str</span>(a / b))<br />
-                </code>
-              </pre>
+                </>
+              } isSelectable={false} />
             </li>
           </ul>
         </div>

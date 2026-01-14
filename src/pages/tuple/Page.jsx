@@ -1,5 +1,6 @@
 import Divider from "../../components/common/Divider";
 import Navigator from "../../components/common/Navigator";
+import CodeContainer from "../../components/common/CodeContainer";
 
 const Tuple = () => {
   const HeroSection = () => {
@@ -33,33 +34,33 @@ const Tuple = () => {
               <h5>Example</h5>
             </li>
             <li>
-              <pre className="code-container">
-                <code className="code-wrapper">
+              <CodeContainer id={"code-container-1"} hasHead={true} hasCopyFunction={true} codeType="python" Code={
+                <>
                   flowers = (<span className="green">"Rose"</span>, <span className="green">"Dandelion"</span>, <span className="green">"Hibiscus"</span>, <span className="green">"Lotus"</span>)
-                </code>
-              </pre>
+                </>
+              } />
             </li>
             <li>
               <h5>Iteration of all items</h5>
             </li>
             <li>
-              <pre className="code-container">
-                <code className="code-wrapper">
+              <CodeContainer id={"code-container-1"} hasHead={true} hasCopyFunction={true} codeType="python" Code={
+                <>
                   <span className="orange">for</span> flower <span className="orange">in</span> flowers:<br />
                   &nbsp;&nbsp;&nbsp;&nbsp;<span className="purple">print</span>(flower)
-                </code>
-              </pre>
+                </>
+              } />
             </li>
             <li>
               <h5>Iteration using specific index</h5>
             </li>
             <li>
-              <pre className="code-container">
-                <code className="code-wrapper">
+              <CodeContainer id={"code-container-1"} hasHead={true} hasCopyFunction={true} codeType="python" Code={
+                <>
                   my_flower = flowers[2]<br />
                   <span className="purple">print</span>(<span className="green">"My flower:"</span>, my_flower)
-                </code>
-              </pre>
+                </>
+              } />
             </li>
           </ul>
         </div>
@@ -76,7 +77,7 @@ const Tuple = () => {
       </section>
     );
   };
-  const Sections = [<HeroSection />,<DefinitionSection />, <Divider />, <StepSection />];
+  const Sections = [<HeroSection />, <DefinitionSection />, <Divider />, <StepSection />];
   return (
     <main className="tuple-page">
       {

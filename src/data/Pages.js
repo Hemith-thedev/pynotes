@@ -11,6 +11,7 @@ import Dictionary from "../pages/dictionary/Page";
 import Functions from "../pages/functions/Page";
 import Modules from "../pages/modules/Page";
 import Test2 from "../pages/tests/2/Page";
+import Numpy from "../pages/numpy/Page";
 
 const Pages = [
   {
@@ -78,6 +79,11 @@ const Pages = [
     element: <Test2 />,
     path: "/tests/2"
   },
+  {
+    title: "Numpy",
+    element: <Numpy />,
+    path: "/libraries/numpy"
+  }
 ]
 
 export default Pages;

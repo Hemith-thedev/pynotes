@@ -34,7 +34,7 @@ const Test2 = () => {
                 <li>
                   <p>2. Python code to print the <span className="highlight">class</span> of the student.</p>
                 </li>
-                <li>
+                <li className="step">
                   <pre className="code-container">
                     <code className="code-wrapper">
                       student = {"{"}<br />
@@ -51,13 +51,27 @@ const Test2 = () => {
               <p>3. Python code to find <span className="highlight">square and cube</span> of a number using functions.</p>
             </li>
             <li>
-              <p>4. Python code to check weather the student is <span className="highlight">passed or failed</span> in exam. <span className="highlight">(Hint: passing marks &gt;= 40)</span></p>
+              <p>4. Python code to <span className="highlight">import</span> functions & implement in <span className="highlight">other</span> file. <span className="highlight">(Hint: implement fundamental mathematical operations)</span></p>
             </li>
             <li>
-              <p>5. Python code to print even numbers from <span className="highlight">1 - 100</span> using while loop.</p>
-            </li>
-            <li>
-              <p>6. Python code to read a number and print <span className="highlight">increasing stars</span> from 0 - number.</p>
+              <ul>
+                <li>
+                  <p>5. Python code to print <span className="highlight">key & value</span> of given dictionary.</p>
+                </li>
+                <li className="step">
+                  <pre className="code-container">
+                    <code className="code-wrapper">
+                      user = {"{"}<br />
+                      &nbsp;&nbsp;&nbsp;&nbsp;<span className="green">"name"</span>: <span className="green">"Alice Atkinson"</span>,<br />
+                      &nbsp;&nbsp;&nbsp;&nbsp;<span className="green">"age"</span>: 28,<br />
+                      &nbsp;&nbsp;&nbsp;&nbsp;<span className="green">"email"</span>: <span className="green">"alice@gmail.com"</span>,<br />
+                      &nbsp;&nbsp;&nbsp;&nbsp;<span className="green">"password"</span>: <span className="green">"alice@1234"</span>,<br />
+                      &nbsp;&nbsp;&nbsp;&nbsp;<span className="green">"isActive"</span>: <span className="orange">True</span><br />
+                      {"}"}
+                    </code>
+                  </pre>
+                </li>
+              </ul>
             </li>
           </ul>
         </div>
@@ -86,14 +100,12 @@ const Test2 = () => {
                   <li>
                     <p>1. Python code to print <span className="highlight">list</span> of numbers from <span className="highlight">1 - 10</span>.</p>
                   </li>
-                  <li>
+                  <li className="step">
                     <pre className="code-container">
                       <code className="code-wrapper">
-                        a = <span className="purple">int</span>(<span className="purple">input</span>(<span className="green">"Enter first number: "</span>))<br />
-                        b = <span className="purple">int</span>(<span className="purple">input</span>(<span className="green">"Enter second number: "</span>))<br />
-                        c = <span className="purple">int</span>(<span className="purple">input</span>(<span className="green">"Enter third number: "</span>))<br />
-                        result = (a + b) - c<br />
-                        <span className="purple">print</span>(<span className="green">"Result: "</span>+<span className="purple">str</span>(result))
+                        numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]<br />
+                        <span className="orange">for</span> n <span className="orange">in</span> numbers:<br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span className="purple">print</span>(n)
                       </code>
                     </pre>
                   </li>
@@ -108,11 +120,15 @@ const Test2 = () => {
                       </li>
                     </ul>
                   </li>
-                  <li>
+                  <li className="step">
                     <pre className="code-container">
                       <code className="code-wrapper">
-                        <span className="orange">for</span> i <span className="orange">in</span> <span className="purple">range</span>(100, 0, -2):<br />
-                        &nbsp;&nbsp;&nbsp;&nbsp;<span className="purple">print</span>(i)
+                        student = {"{"}<br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span className="green">"name"</span>: <span className="green">"Sarah Williams"</span>,<br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span className="green">"age"</span>: 18,<br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span className="green">"class"</span>: <span className="green">"12th"</span><br />
+                        {"}"}<br />
+                        <span className="purple">print</span>(<span className="green">"Class: "</span> + student[<span className="green">"class"</span>])
                       </code>
                     </pre>
                   </li>
@@ -121,15 +137,27 @@ const Test2 = () => {
               <li>
                 <ul>
                   <li>
-                    <p>3. Python code to print <span className="highlight">decreasing stars</span> from 10.</p>
+                    <p>3. Python code to find <span className="highlight">square and cube</span> of a number using functions.</p>
                   </li>
-                  <li>
+                  <li className="step">
                     <pre className="code-container">
                       <code className="code-wrapper">
-                        <span className="orange">for</span> i <span className="orange">in</span> <span className="purple">range</span>(10, 0, -1):<br />
-                        &nbsp;&nbsp;&nbsp;&nbsp;<span className="orange">for</span> j <span className="orange">in</span> <span className="purple">range</span>(i, 0, -1):<br />
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="purple">print</span>(<span className="green">"*"</span>, end=<span className="green">" "</span>)<br />
-                        &nbsp;&nbsp;&nbsp;&nbsp;<span className="purple">print</span>()
+                        <span className="orange">def</span> <span className="blue">printSquare</span>(num):<br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;s = num * num<br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span className="orange">return</span> s<br />
+                        <br />
+                        <span className="orange">def</span> <span className="blue">printCube</span>(num):<br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;c = num * num * num<br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span className="orange">return</span> c<br />
+                        <br />
+                        num = <span className="purple">int</span>(<span className="purple">input</span>(<span className="green">"Enter a number: "</span>))<br />
+                        <br />
+                        s = printSquare(num)<br />
+                        c = printCube(num)<br />
+                        <br />
+                        <span className="purple">print</span>(<span className="green">"Square: "</span> + <span className="purple">str</span>(s))<br />
+                        <span className="purple">print</span>(<span className="green">"Cube: "</span> + <span className="purple">str</span>(c))<br />
+                        <br />
                       </code>
                     </pre>
                   </li>
@@ -138,16 +166,46 @@ const Test2 = () => {
               <li>
                 <ul>
                   <li>
-                    <p>4. Python code to check weather the student is <span className="highlight">passed or failed</span> in exam. <span className="highlight">(Hint: passing marks &gt;= 40)</span></p>
+                    <p>4. Python code to <span className="highlight">import</span> functions & implement in <span className="highlight">other</span> file. <span className="highlight">(Hint: implement fundamental mathematical operations)</span></p>
                   </li>
-                  <li>
+                  <li className="step">
                     <pre className="code-container">
                       <code className="code-wrapper">
-                        marks = 85<br />
-                        <span className="orange">if</span> (marks &gt;= 40):<br />
-                        &nbsp;&nbsp;&nbsp;&nbsp;<span className="purple">print</span>(<span className="green">"Passed"</span>)<br />
-                        <span className="orange">else</span>:<br />
-                        &nbsp;&nbsp;&nbsp;&nbsp;<span className="purple">print</span>(<span className="green">"Failed"</span>)<br />
+                        <span className="red"># File1.py</span><br />
+                        <br />
+                        <span className="orange">def</span> <span className="blue">add</span>(a, b):<br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;c = a + b<br /> 
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span className="orange">return</span> c
+                        <br />
+                        <br />
+                        <span className="orange">def</span> <span className="blue">subtract</span>(a, b):<br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;c = a - b<br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span className="orange">return</span> c
+                        <br />
+                        <br />
+                        <span className="orange">def</span> <span className="blue">multiply</span>(a, b):<br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;c = a * b<br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span className="orange">return</span> c
+                        <br />
+                        <br />
+                        <span className="orange">def</span> <span className="blue">divide</span>(a, b):<br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;c = (b !== 0) ? a / b : <span className="green">"Cannot divide by zero."</span><br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span className="orange">return</span> c
+                        <br />
+                      </code>
+                    </pre>
+                  </li>
+                  <li className="step">
+                    <pre className="code-container">
+                      <code className="code-wrapper">
+                        <span className="red"># File2.py</span><br />
+                        <br />
+                        <span className="orange">import</span> File1 <span className="orange">as</span> functions<br />
+                        <br />
+                        <span className="purple">print</span>(<span className="green">"Sum: "</span> + functions.add(a, b))<br />
+                        <span className="purple">print</span>(<span className="green">"Difference: "</span> + functions.subtract(a, b))<br />
+                        <span className="purple">print</span>(<span className="green">"Product: "</span> + functions.multiply(a, b))<br />
+                        <span className="purple">print</span>(<span className="green">"Quotient: "</span> + functions.divide(a, b))<br />
                       </code>
                     </pre>
                   </li>
@@ -156,34 +214,21 @@ const Test2 = () => {
               <li>
                 <ul>
                   <li>
-                    <p>5. Python code to print even numbers from <span className="highlight">1 - 100</span> using while loop.</p>
+                    <p>5. Python code to print <span className="highlight">key & value</span> of given dictionary.</p>
                   </li>
-                  <li>
+                  <li className="step">
                     <pre className="code-container">
                       <code className="code-wrapper">
-                        number = 1<br />
-                        <span className="orange">while</span> number &gt;= 100:<br />
-                        &nbsp;&nbsp;&nbsp;&nbsp;<span className="orange">if</span> number % 2 == 0:<br />
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="purple">print</span>(number)<br />
-                        &nbsp;&nbsp;&nbsp;&nbsp;number += 1
-                      </code>
-                    </pre>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <ul>
-                  <li>
-                    <p>6. Python code to read a number and print <span className="highlight">increasing stars</span> from 0 - number.</p>
-                  </li>
-                  <li>
-                    <pre className="code-container">
-                      <code className="code-wrapper">
-                        n = <span className="purple">int</span>(<span className="purple">input</span>(<span className="green">"Enter a number: "</span>))<br />
-                        <span className="orange">for</span> i <span className="orange">in</span> <span className="purple">range</span>(0, n + 1, 1):<br />
-                        &nbsp;&nbsp;&nbsp;&nbsp;<span className="orange">for</span> j <span className="orange">in</span> <span className="purple">range</span>(0, i, 1):<br />
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="purple">print</span>(<span className="green">"*"</span>, end=<span className="green">" "</span>)<br />
-                        &nbsp;&nbsp;&nbsp;&nbsp;<span className="purple">print</span>()
+                        user = {"{"}<br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span className="green">"name"</span>: <span className="green">"Alice Atkinson"</span>,<br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span className="green">"age"</span>: 28,<br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span className="green">"email"</span>: <span className="green">"alice@gmail.com"</span>,<br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span className="green">"password"</span>: <span className="green">"alice@1234"</span>,<br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span className="green">"isActive"</span>: <span className="orange">True</span><br />
+                        {"}"}<br />
+                        <br />
+                        <span className="orange">for</span> key, value <span className="orange">in</span> user.items():<br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span className="purple">print</span>(key, <span className="green">":"</span>, value)
                       </code>
                     </pre>
                   </li>
